@@ -48,11 +48,16 @@ static constexpr const wchar_t* helps[] = {
 	L"\t\t The value is for accessing the specified notebook via the take value"
 };
 
+constexpr void out_helps() noexcept {
+	for (auto& help : helps) {
+		std::wcout << help << '\n';
+	}
+	return;
+}
+
 bool handle_single(const std::wstring& commit, std::size_t& index) {
 	if (commit == L"-h") {
-		for (auto& help : helps) {
-			std::wcout << help << '\n';
-		}
+		out_helps();
 		--index;
 		return false;
 	}
@@ -64,8 +69,6 @@ bool handle_single(const std::wstring& commit, std::size_t& index) {
 	message += commit;
 	throw message;
 }
-
-std::unordered_map<std::wstring, void(*)(const std::wstring&)> commit_map;
 
 void hander(const std::wstring& commit, const std::wstring& value, std::size_t& index) {
 	if (value.empty()) {
@@ -154,6 +157,10 @@ int main(int argc, char* argv[]) try {
 	std::locale::global(std::locale(""));
 	std::size_t count = static_cast<std::size_t>(argc);
 	wstr_cast path(argv[1], std::strlen(argv[1]));
+	if (path.data == L"-h") {
+		out_helps();
+		return 0;
+	}
 	archive.reopen_archive(path.data);
 	for (std::size_t i = 2; i <= count - 1; i += 2) {
 		wstr_cast arg(argv[i], std::strlen(argv[i]));
