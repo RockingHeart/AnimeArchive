@@ -1,4 +1,6 @@
-/Project/Generated Files
-
-/Project/packages
-/Project/Project
+**/x64/
+**/Debug/
+**/Release/
+**/Project/
+**/Generated Files/
+**/packages/
