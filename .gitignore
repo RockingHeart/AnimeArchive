@@ -1,10 +1,3 @@
-**/Generated Files/
-**/obj/
-**/bin/
+/Project/Generated Files/
 
-**/packages/
-
-*.g.cs
-*.g.i.cs
-*.g.h
-*.g.cpp
+/Project/packages/
