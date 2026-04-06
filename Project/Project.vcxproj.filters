@@ -1,0 +1,129 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Midl Include="MainWindow.idl" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="WinUILib.cpp">
+      <Filter>UI\Includes</Filter>
+    </ClCompile>
+    <ClCompile Include="$(GeneratedFilesDir)module.g.cpp">
+      <Filter>UI</Filter>
+    </ClCompile>
+    <ClCompile Include="Log.cpp">
+      <Filter>UI\Log</Filter>
+    </ClCompile>
+    <ClCompile Include="File.cpp">
+      <Filter>File</Filter>
+    </ClCompile>
+    <ClCompile Include="SystemClipboard.cpp">
+      <Filter>AnimeArchive</Filter>
+    </ClCompile>
+    <ClCompile Include="Config.cpp">
+      <Filter>UI\Config</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="Assets\Wide310x150Logo.scale-200.png">
+      <Filter>Assets</Filter>
+    </Image>
+    <Image Include="Assets\StoreLogo.png">
+      <Filter>Assets</Filter>
+    </Image>
+    <Image Include="Assets\Square150x150Logo.scale-200.png">
+      <Filter>Assets</Filter>
+    </Image>
+    <Image Include="Assets\Square44x44Logo.targetsize-24_altform-unplated.png">
+      <Filter>Assets</Filter>
+    </Image>
+    <Image Include="Assets\Square44x44Logo.scale-200.png">
+      <Filter>Assets</Filter>
+    </Image>
+    <Image Include="Assets\SplashScreen.scale-200.png">
+      <Filter>Assets</Filter>
+    </Image>
+    <Image Include="Assets\LockScreenLogo.scale-200.png">
+      <Filter>Assets</Filter>
+    </Image>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Assets">
+      <UniqueIdentifier>{323f0f75-b910-4ce4-846f-4ef9858db34c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="UI">
+      <UniqueIdentifier>{f1b68604-b16a-43f1-b6fe-9243cbee419f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="UI\Includes">
+      <UniqueIdentifier>{ce145d19-a6f0-4766-9c24-f00f54c69b73}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="UI\App">
+      <UniqueIdentifier>{a2e6ecba-39af-4586-9c0b-5bd9e033caab}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AnimeArchive">
+      <UniqueIdentifier>{ccd878a6-c883-40de-a6e2-1a9edeaf543b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="UI\Log">
+      <UniqueIdentifier>{715e6b2e-34ad-4d5f-aaa4-c30b14734e9a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="UI\Config">
+      <UniqueIdentifier>{9a9f9554-97db-4e1a-a7c1-9887961f7eba}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="UI\Menu">
+      <UniqueIdentifier>{58a6ff72-e8b4-4cc1-be56-ce523b9876cd}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="File">
+      <UniqueIdentifier>{2590fc14-58f8-4c83-b93d-47c66ec67d67}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <AppxManifest Include="Package.appxmanifest" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Natvis Include="$(MSBuildThisFileDirectory)..\..\natvis\wil.natvis" />
+    <Natvis Include="$(MSBuildThisFileDirectory)..\..\natvis\wil.natstepfilter" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="WinUILib.h">
+      <Filter>UI\Includes</Filter>
+    </ClInclude>
+    <ClInclude Include="AnimeArchive\SystemClipboard.h">
+      <Filter>AnimeArchive</Filter>
+    </ClInclude>
+    <ClInclude Include="AnimeArchive\Archive.h">
+      <Filter>AnimeArchive</Filter>
+    </ClInclude>
+    <ClInclude Include="Log.h">
+      <Filter>UI\Log</Filter>
+    </ClInclude>
+    <ClInclude Include="Config.h">
+      <Filter>UI\Config</Filter>
+    </ClInclude>
+    <ClInclude Include="File.h">
+      <Filter>File</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ApplicationDefinition Include="App.xaml">
+      <Filter>UI\App</Filter>
+    </ApplicationDefinition>
+  </ItemGroup>
+  <ItemGroup>
+    <Manifest Include="app.manifest">
+      <Filter>UI\App</Filter>
+    </Manifest>
+  </ItemGroup>
+  <ItemGroup>
+    <Page Include="MainWindow.xaml">
+      <Filter>UI\Menu</Filter>
+    </Page>
+    <Page Include="MainPage.xaml">
+      <Filter>UI\Menu</Filter>
+    </Page>
+    <Page Include="Settings.xaml">
+      <Filter>UI\Menu</Filter>
+    </Page>
+  </ItemGroup>
+</Project>

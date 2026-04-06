@@ -1,0 +1,10 @@
+**/Generated Files/
+**/obj/
+**/bin/
+
+**/packages/
+
+*.g.cs
+*.g.i.cs
+*.g.h
+*.g.cpp
