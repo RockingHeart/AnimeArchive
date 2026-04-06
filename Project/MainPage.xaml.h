@@ -9,7 +9,7 @@
 using namespace winrt::Microsoft::UI::Xaml;
 using namespace winrt::Microsoft::UI;
 
-namespace winrt::Project::implementation
+namespace winrt::AnimeArchive::implementation
 {
     struct MainPage : MainPageT<MainPage>
     {
@@ -66,7 +66,7 @@ namespace winrt::Project::implementation
     };
 }
 
-namespace winrt::Project::factory_implementation
+namespace winrt::AnimeArchive::factory_implementation
 {
     struct MainPage : MainPageT<MainPage, implementation::MainPage>
     {

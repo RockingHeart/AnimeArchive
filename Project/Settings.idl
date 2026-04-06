@@ -1,4 +1,4 @@
-namespace Project
+﻿namespace AnimeArchive
 {
     [default_interface]
     runtimeclass Settings : Microsoft.UI.Xaml.Controls.Page

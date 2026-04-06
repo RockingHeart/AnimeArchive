@@ -5,7 +5,7 @@
 
 using namespace winrt::Microsoft::UI::Xaml;
 
-namespace winrt::Project::implementation
+namespace winrt::AnimeArchive::implementation
 {
     class MainWindow : public MainWindowT<MainWindow>
     {
@@ -31,7 +31,7 @@ namespace winrt::Project::implementation
     };
 }
 
-namespace winrt::Project::factory_implementation
+namespace winrt::AnimeArchive::factory_implementation
 {
     struct MainWindow : MainWindowT<MainWindow, implementation::MainWindow>
     {

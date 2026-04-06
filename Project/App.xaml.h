@@ -4,7 +4,7 @@
 
 extern winrt::Microsoft::UI::Xaml::Window window;
 
-namespace winrt::Project::implementation
+namespace winrt::AnimeArchive::implementation
 {
     struct App : AppT<App>
     {

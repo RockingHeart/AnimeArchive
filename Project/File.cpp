@@ -45,15 +45,21 @@ catch (winrt::hresult_error const& ex)
     co_return nullptr;
 }
 
-IAsyncOperation<StorageFile> File::OpenFolderSync(winrt::hstring const& FileName) try {
-    StorageFile Result = { nullptr };
-
-    StorageFolder LocalFolder = ApplicationData::Current().LocalFolder();
-    Result = co_await LocalFolder.CreateFileAsync(FileName, CreationCollisionOption::OpenIfExists);
-    co_return Result;
-}
-catch (winrt::hresult_error const& ex)
-{
-    OutputDebugString((L"错误: " + ex.message() + L"\n").c_str());
-    co_return nullptr;
+IAsyncOperation<StorageFile> File::OpenFolderSync(winrt::hstring const& FileName) {
+    try
+    {
+        StorageFolder LocalFolder = ApplicationData::Current().LocalFolder();
+        StorageFile Result = co_await LocalFolder.CreateFileAsync(FileName, CreationCollisionOption::OpenIfExists);
+        co_return Result;
+    }
+    catch (winrt::hresult_error const& ex)
+    {
+        OutputDebugString((L"错误: " + ex.message() + L"\n").c_str());
+        co_return nullptr;
+    }
+    catch (...)
+    {
+        OutputDebugString(L"未知错误\n");
+        co_return nullptr;
+    }
 }

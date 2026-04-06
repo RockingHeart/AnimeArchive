@@ -3,7 +3,7 @@
 #include "Settings.g.h"
 #include "Config.h"
 
-namespace winrt::Project::implementation
+namespace winrt::AnimeArchive::implementation
 {
     struct Settings : SettingsT<Settings>
     {
@@ -30,7 +30,7 @@ namespace winrt::Project::implementation
     };
 }
 
-namespace winrt::Project::factory_implementation
+namespace winrt::AnimeArchive::factory_implementation
 {
     struct Settings : SettingsT<Settings, implementation::Settings>
     {

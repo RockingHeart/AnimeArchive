@@ -43,7 +43,7 @@ namespace {
     }
 }
 
-namespace winrt::Project::implementation
+namespace winrt::AnimeArchive::implementation
 {
     IAsyncOperation<StorageFile> MainWindow::SelectFile() {
         StorageFile File = nullptr;
@@ -78,7 +78,7 @@ namespace winrt::Project::implementation
     }
 }
 
-namespace winrt::Project::implementation
+namespace winrt::AnimeArchive::implementation
 {
     MainWindow::MainWindow()
     {
@@ -86,7 +86,7 @@ namespace winrt::Project::implementation
     }
 }
 
-namespace winrt::Project::implementation
+namespace winrt::AnimeArchive::implementation
 {
 
     int32_t MainWindow::MyProperty()
@@ -120,7 +120,7 @@ namespace winrt::Project::implementation
             else {
                 CurrentTag = TagNamed;
                 MainNavigation().SelectedItem(FindNavViewItem(MenuItems, TagNamed));
-                auto TargetPageType = winrt::xaml_typename<Project::MainPage>();
+                auto TargetPageType = winrt::xaml_typename<AnimeArchive::MainPage>();
                 Frame.Navigate(TargetPageType);
                 co_return nullptr;
             }
@@ -161,7 +161,7 @@ namespace winrt::Project::implementation
 
         if (args.IsSettingsInvoked())
         {
-            auto TargetPageType = winrt::xaml_typename<Project::Settings>();
+            auto TargetPageType = winrt::xaml_typename<AnimeArchive::Settings>();
             Frame.Navigate(TargetPageType);
             co_return;
         }
@@ -181,7 +181,7 @@ namespace winrt::Project::implementation
             }
             auto Item = co_await AddFile(File, Frame);
             MainNavigation().SelectedItem(Item);
-            auto TargetPageType = winrt::xaml_typename<Project::MainPage>();
+            auto TargetPageType = winrt::xaml_typename<AnimeArchive::MainPage>();
             Frame.Navigate(TargetPageType);
             co_return;
         }
@@ -190,7 +190,7 @@ namespace winrt::Project::implementation
                 co_return;
             }
             CurrentTag = TagNamed;
-            auto TargetPageType = winrt::xaml_typename<Project::MainPage>();
+            auto TargetPageType = winrt::xaml_typename<AnimeArchive::MainPage>();
             Frame.Navigate(TargetPageType);
         }
     }
@@ -199,7 +199,7 @@ namespace winrt::Project::implementation
         winrt::Microsoft::UI::Xaml::RoutedEventArgs const& E)
     {
         auto Frame = NavigationFrame();
-        if (auto Page = Frame.Content().try_as<Project::MainPage>())
+        if (auto Page = Frame.Content().try_as<AnimeArchive::MainPage>())
         {
             Page.ContextCanceled(nullptr);
         }

@@ -65,7 +65,7 @@ namespace {
     }
 }
 
-namespace winrt::Project::implementation
+namespace winrt::AnimeArchive::implementation
 {
     IAsyncAction MainPage::DefAddToChoose(Controls::UIElementCollection const& ChildrenElems) {
         auto Viewer = Archives[CurrentTag].view() ^ [this, &ChildrenElems](winrt::hstring LineContent, std::size_t index) -> IAsyncAction {
@@ -113,7 +113,7 @@ namespace winrt::Project::implementation
     }
 }
 
-namespace winrt::Project::implementation
+namespace winrt::AnimeArchive::implementation
 {
     int32_t MainPage::MyProperty()
     {

@@ -7,7 +7,7 @@
 using namespace winrt;
 using namespace Microsoft::UI::Xaml;
 
-namespace winrt::Project::implementation
+namespace winrt::AnimeArchive::implementation
 {
     int32_t Settings::MyProperty()
     {

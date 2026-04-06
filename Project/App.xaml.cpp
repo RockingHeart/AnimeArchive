@@ -13,7 +13,7 @@ using namespace Windows::Foundation;
 // To learn more about WinUI, the WinUI project structure,
 // and more about our project templates, see: http://aka.ms/winui-project-info.
 
-namespace winrt::Project::implementation
+namespace winrt::AnimeArchive::implementation
 {
     /// <summary>
     /// Initializes the singleton application object.  This is the first line of authored code
@@ -21,7 +21,7 @@ namespace winrt::Project::implementation
     /// </summary>
     App::App()
     {
-
+        
 #if defined _DEBUG && !defined DISABLE_XAML_GENERATED_BREAK_ON_UNHANDLED_EXCEPTION
         UnhandledException([](IInspectable const&, UnhandledExceptionEventArgs const& e)
         {

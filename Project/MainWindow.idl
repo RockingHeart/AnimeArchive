@@ -1,4 +1,4 @@
-namespace Project
+﻿namespace AnimeArchive
 {
     [default_interface]
     runtimeclass MainWindow : Microsoft.UI.Xaml.Window

@@ -119,10 +119,10 @@
     <Page Include="MainWindow.xaml">
       <Filter>UI\Menu</Filter>
     </Page>
-    <Page Include="MainPage.xaml">
+    <Page Include="Settings.xaml">
       <Filter>UI\Menu</Filter>
     </Page>
-    <Page Include="Settings.xaml">
+    <Page Include="MainPage.xaml">
       <Filter>UI\Menu</Filter>
     </Page>
   </ItemGroup>
